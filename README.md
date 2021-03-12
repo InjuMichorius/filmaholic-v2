@@ -1,54 +1,99 @@
-# Progressive Web Apps @cmda-minor-web · 20-21
+# Filmaholic
+![](https://github.com/InjuMichorius/Filmaholic/blob/master/images/README%20images/READMECOVER.JPG)
 
-In this course we will convert the client side web application previously made Web App From Scratch into a server side rendered application. We also add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately we are going to implement a series of optimisations to improve the performance of the application.  
+Filmaholic is a movie rating application that rates the suitability of movies to its audience using an API. 
 
-## Learning goals
-- _You understand the difference between client side and server side rendering and you can apply server side rendering
-in your application_
-- _You understand how a Service Worker works and you can implement it in your application._
-- _You understand how the critical render path works and how you can optimize it for a better runtime and / or perceived performance._
+[Click here for the live demo](https://injumichorius.github.io/Filmaholic/)
 
-[Rubric with learning goals](https://icthva.sharepoint.com/:x:/r/sites/FDMCI_EDU__CMD20_21_Minor_Web_5i7j73jt/_layouts/15/Doc.aspx?sourcedoc=%7B276F53A7-2531-4006-8AD2-08C9A82D3A11%7D&file=PWA%202021%20Rubric.xlsx&action=edit&mobileredirect=true&wdPreviousSession=92686bea-446f-40e3-9303-33fa3f832b82&wdOrigin=TEAMS-ELECTRON.teams.undefined)
+## Goal
+The goal of Filmaholic is to provide its audience with information about movies, so they can make a decision on what to watch. They can also search a movie to see other people's opinions. This application will show the overall rating of any movie using the The Movie DataBase API.
 
-## Program
+## Actor Diagram
+![Image of Actor Diagram](https://github.com/InjuMichorius/Filmaholic/blob/master/images/README%20images/actorDiagram.jpg)
 
-### Week 1 - Server Side Rendering 📡
+## API
+I made use of [The Movie DB API](https://www.themoviedb.org/) for this project.
+The base endpoint is https://api.themoviedb.org/. All endpoints return either a JSON object or an array. The endpoints I use are popular and ID. This is the structure of a movie array:
 
-Goal: Render web pages server side
+```json
+{
+  "adult": false,
+  "backdrop_path":"/8tNX8s3j1O0eqilOQkuroRLyOZA.jpg"
+  "genre_ids":[14,28,12],
+  "id":458576,"original_language":"en",
+  "original_title":"Monster Hunter",
+  "overview":"A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity.",
+  "popularity":3079.082,
+  "poster_path":"/uwjaCH7PiWrkz7oWJ4fcL3xGrb0.jpg",
+  "release_date":"2020-12-03",
+  "title":"Monster Hunter",
+  "video":false,
+  "vote_average":7.3,
+  "vote_count":869
+}
+```
 
-[Exercises](https://github.com/cmda-minor-web/progressive-web-apps-2021/blob/master/course/week-1.md)    
-[Server Side Rendering - slides Declan Rek](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2021-server-side-rendering.pdf)  
+The api url needs 3 things.
+* The base URL (https://api.themoviedb.org/)
+* The endpoint (popular)
+* The API key (?api_key=0a00a0a0aaa0aa00a0000a0000a0a0a0)
 
+The returning array will contain result[0] up to result[20]. The result is the movie array I made above.
 
-### Week 2 - Progressive Web App 🚀
+## Interaction Diagram
+![Image of Interaction Diagram](https://github.com/InjuMichorius/Filmaholic/blob/master/images/README%20images/interactionDiagram.jpg)
 
-Goals: Convert application to a Progressive Web App
+## Design patterns and Best Practices
+__Code standards are important__ when working on any project; your code stays *consistent* and is *readable* for everyone. I defined code standards for __HTML__, __CSS__ and __JS__ while working on this project.
 
-[Exercises](https://github.com/cmda-minor-web/progressive-web-apps-2021/blob/master/course/week-2.md)  
-[Progressive Web Apps - slides Declan Rek](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2020-progressive-web-apps.pdf)
+### Javascript code standards
+* Variables & functions are written in __camelCase__
+* Promises are handled with __async functions__ using await
+* I don't use var, only __const__ or __let__
+* I put __spaces around operators__ ( = + - * / ) and after commas (exception for for loops)
+* I use indentation with __TAB__
+* I always end a statement with a __semi-colon;__
+* Functions have their opening bracket on the __same line__ as the name, with 1 space in between
+* I use __ES6 syntax__ where possible
 
+### CSS code standards
+* I try to avoid __!important__ as much as possible
+* Layout/general styling is always __above__ more specific styling
+* Selectors are not unnecessary __long__ nor __short__
+* I use __CSS3 syntax__ where possible
+* I avoid old display properties like float
+* CSS Selectors must have a __space__ between the name and bracket
 
-### Week 3 - Critical Rendering Path 📉 
+### HTML code standards
+* I only use IDs when the element is present __once__ on a page and it's necessary for styling or Javascript
+* I always write semantic HTML according to __W3C Validator__
+* Divs are only used when __necessary__ for styling purposes
+* Classes allow easy __re-usage__
+* Indentation is always __clear__
 
-Doel: Optimize the Critical Rendering Path   
-[Exercises](https://github.com/cmda-minor-web/progressive-web-apps-2021/blob/master/course/week-3.md)  
-[Critical Rendering Path - slides Declan Rek](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2020-critical-rendering-path.pdf)
+## Feature wishlist / backlog
+* A register/login page
+* A way for users to interact
+* A way to rate a movie and update this on the application
+* A small trailer of the movie
+* Reviews
 
+## Getting started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+### Technical requirements
+To run this project you'll need [Git](https://git-scm.com/downloads), [TMDB API](https://developers.themoviedb.org/3) and any [code editor](https://code.visualstudio.com/download)
 
-<!-- ☝️ replace this description with a description of your own work -->
+### Installing
+First you'll need to clone the repository. You can choose a destination by running cd (change directory). You can clone this repository by using clone https://github.com/InjuMichorius/Filmaholic.git.
 
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
+```js
+cd [ENTER YOUR PATH HERE]
+git clone https://github.com/InjuMichorius/Filmaholic.git
+```
 
-<!-- Maybe a table of contents here? 📚 -->
+### Testing
+To test if the application works you can open the index.html file. If you see the movie covers it works!
 
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+## License
+This project is licensed under the MIT license. See the [LISENCE.md](https://github.com/InjuMichorius/Filmaholic/blob/master/LICENSE) file for details
