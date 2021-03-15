@@ -1,28 +1,28 @@
-import { search } from './search.js'
-import { movieOverview } from './movieOverview.js';
-import { movieDetails } from './movieDetails.js';
-search();
-
+const renderOverview = require('./source/movieOverview.js')
+const renderDetail = require('./source/movieDetail.js')
 const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path');
 
+//Identifying default path
 app.use(express.static(__dirname + '/public/'));
 
-//Initializing ejs
+//Templating engine
 app.set('views', 'view')
 app.set('view engine', 'ejs')
 
 //Routes
-app.get('/', (req, res) => {
-    res.render('overview')
+app.get('/', renderOverview)
+
+app.get('/:id', renderDetail)
+
+app.get('/test', (req, res) => {
+  res.render('test')
 })
 
-app.get('/test', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
-});
 
+//Server check
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

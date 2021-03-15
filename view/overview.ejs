@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./images/clapperboard.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="../images/clapperboard.png" type="image/gif" sizes="16x16">
     <title>Filmaholic | Ratings en Reviews</title>
-    <script src="./source/script.js" type="module"> defer</script>
-    <script src="./libraries/routie.js"></script>
 </head>
 
 <body>
@@ -22,34 +20,29 @@
             <div class="dropdown">
                 <button class="dropbtn">Sort</button>
                 <div class="dropdown-content">
-                  <button class="alphabetical">Alphabetical</button>
-                  <button class="vote-average">Votes</button>
-                  <button class="release-date">Date</button>
+                    <button class="alphabetical">Alphabetical</button>
+                    <button class="vote-average">Votes</button>
+                    <button class="release-date">Date</button>
                 </div>
-              </div>
+            </div>
             <button>Filters</button>
         </section>
     </header>
 
     <!-- HTML gets rendered here -->
     <main id="movie-template">
-    </main>
+        <% movies.forEach(function(movie) { %>
+            <article class="movie">
+                <a href="<%= movie.id %>">
+                <img src="https://image.tmdb.org/t/p/w200/<%= movie.poster_path %>" alt="Cover of <%= movie.title %>">
+                <p class="movie-title"><%= movie.title %></p>
+                <p><%= movie.release_date %></p>
+                <p><%= movie.vote_average %></p>
+                </a>
+                </article>`
+        <% }) %>
 
-    <!-- loading state, hides when api is loaded -->
-    <div id="lds-spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    </main>
 </body>
 
 </html>

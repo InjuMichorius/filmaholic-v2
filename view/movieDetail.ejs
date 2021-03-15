@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../images/clapperboard.png" type="image/gif" sizes="16x16">
+    <title>Filmaholic | Ratings en Reviews</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Filmaholic</a>
+            <label for="">Search</label>
+            <input type="text" placeholder="Search movie.." id="find-movies">
+        </nav>
+        <section>
+            <div class="dropdown">
+                <button class="dropbtn">Sort</button>
+                <div class="dropdown-content">
+                    <button class="alphabetical">Alphabetical</button>
+                    <button class="vote-average">Votes</button>
+                    <button class="release-date">Date</button>
+                </div>
+            </div>
+            <button>Filters</button>
+        </section>
+    </header>
+
+    <!-- HTML gets rendered here -->
+    <main id="movie-template">
+        <div class="movieDetails">
+            <div class="container">
+                <img class="ww" src="https://image.tmdb.org/t/p/w200//<%=movie.backdrop_path%>"
+                    alt="Background image of <%=movie.title%>"">
+            <div class=" centered"><img src="https://image.tmdb.org/t/p/w200/<%=movie.poster_path%>"
+                    alt="Cover of <%=movie.title%>">
+            </div>
+        </div>
+        <article>
+            <h1>
+                <%= movie.original_title %>
+            </h1>
+            <div>
+                <span>Release</span>
+                <p>
+                    <%= movie.release_date%>
+                </p>
+            </div>
+            <div>
+                <span>Rating</span>
+                <p>
+                    <%= movie.vote_average %>
+                </p>
+            </div>
+            <div>
+                <span>Rating</span>
+                <p>
+                    <%= movie.vote_average %>
+                </p>
+            </div>
+            <div>
+                <span>Total votes</span>
+                <p>
+                    <%= movie.vote_count %>
+                </p>
+            </div>
+            <div>
+                <span>Description</span>
+                <p>
+                    <%= movie.overview %>
+                </p>
+            </div>
+        </article>
+        </div>
+    </main>
+</body>
+
+</html>
