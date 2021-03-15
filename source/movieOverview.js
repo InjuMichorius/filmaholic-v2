@@ -4,6 +4,6 @@ const fetchData = require('./api.js')
 module.exports = async function movieOverview(req, res) {
     const json = await fetchData('popular')
     const movies = json.results
-
+    
     res.render('overview', {movies: movies})
 }

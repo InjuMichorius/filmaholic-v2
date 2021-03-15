@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../images/clapperboard.png" type="image/gif" sizes="16x16">
+    <%- include('./components/head') %>
     <title>Filmaholic | Ratings en Reviews</title>
 </head>
 
@@ -39,7 +36,7 @@
                 <p><%= movie.release_date %></p>
                 <p><%= movie.vote_average %></p>
                 </a>
-                </article>`
+                </article>
         <% }) %>
 
     </main>
