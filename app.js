@@ -1,13 +1,25 @@
+import { search } from './search.js'
+import { movieOverview } from './movieOverview.js';
+import { movieDetails } from './movieDetails.js';
+search();
+
 const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path');
 
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
+app.use(express.static(__dirname + '/public/'));
+
+//Initializing ejs
+app.set('views', 'view')
+app.set('view engine', 'ejs')
+
+//Routes
+app.get('/', (req, res) => {
+    res.render('overview')
 })
 
-app.get('/', function(req, res) {
+app.get('/test', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 

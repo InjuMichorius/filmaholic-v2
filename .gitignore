@@ -1,1 +1,6 @@
-notes.md
+DS_store
+/course
+/docs
+/examples
+/node_modules
+/.env
