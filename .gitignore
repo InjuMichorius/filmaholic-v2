@@ -4,3 +4,4 @@ DS_store
 /examples
 /node_modules
 /.env
+/.vscode

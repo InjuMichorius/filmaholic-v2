@@ -1,4 +1,4 @@
-const fetchData = require('./api.js')
+const fetchData = require('../api')
 
 //create function to render all popular movies. These will be rendered based on sorting (none by default).
 module.exports = async function movieDetail(req, res) {

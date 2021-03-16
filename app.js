@@ -1,5 +1,5 @@
-const renderOverview = require('./source/movieOverview.js')
-const renderDetail = require('./source/movieDetail.js')
+const renderOverview = require('./public/source/routes/movieOverview.js')
+const renderDetail = require('./public/source/routes/movieDetail.js')
 const express = require('express')
 const app = express()
 const port = 3000
