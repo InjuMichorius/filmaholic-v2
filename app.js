@@ -17,8 +17,8 @@ app.get('/', renderOverview)
 
 app.get('/:id', renderDetail)
 
-app.get('/test', (req, res) => {
-  res.render('test')
+app.get('/offline', (req, res) => {
+  res.render('offline')
 })
 
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/clapperboard.png" type="image/png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <title>Filmaholic | Offline</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="http://localhost:3000/">Filmaholic</a>
+            <label for="">Search</label>
+            <input type="text" placeholder="Search movie.." id="find-movies">
+        </nav>
+        <section>
+            <div class="dropdown">
+                <button class="dropbtn">Sort</button>
+                <div class="dropdown-content">
+                    <button class="alphabetical">Alphabetical</button>
+                    <button class="vote-average">Votes</button>
+                    <button class="release-date">Date</button>
+                </div>
+            </div>
+            <button>Filters</button>
+        </section>
+    </header>
+    <main>
+
+    <h1 class="error">You're not connected to the internet</h1>
+    <!-- loading state, hides when api is loaded -->
+    <div id="lds-spinner" class="offline-load">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </main>
+</body>
+
+</html>

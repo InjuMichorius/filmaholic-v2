@@ -1,0 +1,14 @@
+{
+    "short_name": "Filmaholic",
+    "name": "Filmaholic - Movie ratings and reviews",
+    "description": "Filmaholic is a movie rating application that rates the suitability of movies to its audience using an API.",
+    "icons": [{
+        "src": "/images/clapperboard.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }],
+    "start_url": "/",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#FF0037"
+}

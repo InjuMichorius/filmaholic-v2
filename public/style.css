@@ -209,7 +209,7 @@ a {
 
 /*loader from https://loading.io/css/*/
 #lds-spinner {
-    margin: 30vh auto;
+    margin: 10vh auto;
     width: 80px;
     height: 80px;
 }
@@ -289,6 +289,11 @@ a {
 #lds-spinner div:nth-child(12) {
     transform: rotate(330deg);
     animation-delay: 0s;
+}
+
+.error {
+    text-align: center;
+    margin-top: 10rem;
 }
 
 @keyframes lds-spinner {
