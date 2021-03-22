@@ -3,7 +3,7 @@
 
 Filmaholic is a movie rating application that rates the suitability of movies to its audience using an API, but this time I am doing this server-sided. 
 
-[Click here for the live demo](https://injumichorius.github.io/Filmaholic/)
+[Click here for the live demo](https://injumichorius.github.io/filmaholic-v2/)
 
 ## Goal
 The goal of Filmaholic is to provide its audience with information about movies, so they can make a decision on what to watch. They can also search a movie to see other people's opinions. This application will show the overall rating of any movie using the The Movie DataBase API.
