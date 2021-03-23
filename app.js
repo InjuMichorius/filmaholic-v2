@@ -3,7 +3,19 @@ const renderDetail = require('./public/source/routes/movieDetail.js')
 const express = require('express')
 const app = express()
 const port = 3000
-const path = require('path');
+const compression = require('compression')
+
+//Code that minifies files
+app.use(compression({
+  level: 6,
+  threshold: 0,
+  filter: (req, res) => {
+    if (req.header['x-no-compression']) {
+      return false
+    }
+    return compression.filter(req, res)
+  },
+}))
 
 //Identifying default path
 app.use(express.static(__dirname + '/public/'));

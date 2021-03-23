@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/InjuMichorius/progressive-web-apps-2021#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1"

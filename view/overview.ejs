@@ -31,7 +31,7 @@
         <% movies.forEach(function(movie) { %>
             <article class="movie">
                 <a href="<%= movie.id %>">
-                <img src="https://image.tmdb.org/t/p/w200/<%= movie.poster_path %>" alt="Cover of <%= movie.title %>">
+                <img src="https://image.tmdb.org/t/p/w200/<%= movie.poster_path %>" alt="Cover of <%= movie.title %>" width="224" height="336" background-color="#333">
                 <p class="movie-title"><%= movie.title %></p>
                 <p><%= movie.release_date %></p>
                 <p><%= movie.vote_average %></p>
