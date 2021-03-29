@@ -2,7 +2,7 @@ const renderOverview = require('./public/source/routes/movieOverview.js')
 const renderDetail = require('./public/source/routes/movieDetail.js')
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const compression = require('compression')
 
 //Code that minifies files
