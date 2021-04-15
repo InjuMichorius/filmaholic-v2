@@ -1,5 +1,4 @@
-import { fetchData } from './api.js'
-const loader = document.getElementById('lds-spinner')
+const fetchData = require('./api.js')
 const input = document.getElementById('find-movies');
 
 input.addEventListener('keyup', search);
