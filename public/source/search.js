@@ -1,4 +1,5 @@
-const fetchData = require('./api.js')
+import { fetchData } from './api.js'
+
 const input = document.getElementById('find-movies');
 
 input.addEventListener('keyup', search);

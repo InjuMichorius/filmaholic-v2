@@ -1,9 +1,17 @@
-const renderOverview = require('./public/source/routes/movieOverview.js')
-const renderDetail = require('./public/source/routes/movieDetail.js')
-const express = require('express')
+import { movieOverview } from './public/source/routes/movieOverview.js'
+import { movieDetail } from './public/source/routes/movieDetail.js'
+
+import express from "express"
+import compression from "compression"
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from "path"
+
 const app = express()
 const port = process.env.PORT || 3000
-const compression = require('compression')
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 //Code that minifies files
 app.use(compression({
@@ -25,9 +33,9 @@ app.set('views', 'view')
 app.set('view engine', 'ejs')
 
 //Routes
-app.get('/', renderOverview)
+app.get('/', movieOverview)
 
-app.get('/:id', renderDetail)
+app.get('/:id', movieDetail)
 
 app.get('/offline', (req, res) => {
   res.render('offline')
