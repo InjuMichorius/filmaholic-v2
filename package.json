@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Filmaholic is a movie rating application that rates the suitability of movies to its audience using an API",
   "main": "app.js",
-  "type": "module",
   "directories": {
     "doc": "docs",
     "example": "examples"
