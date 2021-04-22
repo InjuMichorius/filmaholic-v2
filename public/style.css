@@ -46,7 +46,7 @@ header nav input:focus {
     border: 2px solid var(--accent);
 }
 
-header label {
+label.find-movies {
     display: none;
 }
 
@@ -69,6 +69,7 @@ header section button {
     background-color: var(--secondary);
     border: none;
     line-height: 6vh;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -84,12 +85,20 @@ header section button {
     z-index: 1;
 }
 
-.dropdown-content button {
-    padding: 1rem;
-    width: 160px;
+input[type="radio"] {
+    display: none;
 }
 
-.dropdown-content button:hover {
+.dropdown-content label {
+    padding: 0;
+    margin: 5rem;
+}
+
+.dropdown-content input[type="radio"]:checked + label {
+    color: red;
+}
+
+.dropdown-content label:hover {
     background-color: var(--primary);
 }
 
@@ -101,7 +110,14 @@ header section button {
     background-color: var(--primary);
 }
 
-header section button:hover {
+header section label:hover {
+    cursor: pointer;
+}
+
+.dropdown-content input[type="submit"] {
+    background-color: var(--accent);
+    width: 100%;
+    border: none;
     cursor: pointer;
 }
 

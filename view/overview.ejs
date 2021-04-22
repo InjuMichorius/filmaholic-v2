@@ -3,23 +3,38 @@
 
 <head>
     <%- include('./components/head') %>
-    <title>Filmaholic | Ratings en Reviews</title>
+        <title>Filmaholic | Ratings en Reviews</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="http://localhost:3000/">Filmaholic</a>
-            <label for="">Search</label>
-            <input type="text" placeholder="Search movie.." id="find-movies">
+            <a href="#">Filmaholic</a>
+            <form action="/search">
+                <label for="find-movies" class="find-movies">Search</label>
+                <input type="text" placeholder="Search movie.." id="find-movies" name="q">
+            </form>
         </nav>
         <section>
             <div class="dropdown">
                 <button class="dropbtn">Sort</button>
                 <div class="dropdown-content">
-                    <button class="alphabetical">Alphabetical</button>
-                    <button class="vote-average">Votes</button>
-                    <button class="release-date">Date</button>
+                    <form action="/sortData" method="POST">
+                    <label for="alphabetical">Alphabetical
+                        <input type="radio" value="alphabetical" name="sort" id="alphabetical">
+                    </label>
+                    <label for="vote-average">Vote average
+                        <input type="radio" value="vote-average" name="sort" id="vote-average">
+                    </label>
+                    <label for="release-date">Release date
+                        <input type="radio" value="release-date" name="sort" id="release-date">
+                    </label>
+                    
+                    <input type="submit" value="Sort movies">
+                    </form>
+                    <!-- <button class="alphabetical" data-value="alphabetical">Alphabetical</button>
+                    <button class="vote-average" data-value="vote-average">Votes</button>
+                    <button class="release-date" data-value="release-date">Date</button> -->
                 </div>
             </div>
         </section>
@@ -30,13 +45,20 @@
         <% movies.forEach(function(movie) { %>
             <article class="movie">
                 <a href="<%= movie.id %>">
-                <img src="https://image.tmdb.org/t/p/w200/<%= movie.poster_path %>" alt="Cover of <%= movie.title %>" width="224" height="336" background-color="#333">
-                <p class="movie-title"><%= movie.title %></p>
-                <p><%= movie.release_date %></p>
-                <p><%= movie.vote_average %></p>
+                    <img src="https://image.tmdb.org/t/p/w200/<%= movie.poster_path %>"
+                        alt="Cover of <%= movie.title %>" width="224" height="336" background-color="#333">
+                    <p class="movie-title">
+                        <%= movie.title %>
+                    </p>
+                    <p>
+                        <%= movie.release_date %>
+                    </p>
+                    <p>
+                        <%= movie.vote_average %>
+                    </p>
                 </a>
-                </article>
-        <% }) %>
+            </article>
+            <% }) %>
 
     </main>
 </body>

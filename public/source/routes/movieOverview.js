@@ -1,7 +1,7 @@
 import { fetchData } from '../api.js'
 
 //create function to render all popular movies. These will be rendered based on sorting (none by default).
-export async function movieOverview(req, res) {
+export async function movieOverview(req, res, sorting) {
     const json = await fetchData('popular')
     const movies = json.results
     
