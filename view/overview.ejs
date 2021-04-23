@@ -20,21 +20,18 @@
                 <button class="dropbtn">Sort</button>
                 <div class="dropdown-content">
                     <form action="/sortData" method="POST">
-                    <label for="alphabetical">Alphabetical
+
                         <input type="radio" value="alphabetical" name="sort" id="alphabetical">
-                    </label>
-                    <label for="vote-average">Vote average
+                        <label for="alphabetical">Alphabetical</label>
+                        
                         <input type="radio" value="vote-average" name="sort" id="vote-average">
-                    </label>
-                    <label for="release-date">Release date
+                        <label for="vote-average">Votes</label>
+
                         <input type="radio" value="release-date" name="sort" id="release-date">
-                    </label>
-                    
-                    <input type="submit" value="Sort movies">
+                        <label for="release-date">Date</label>
+
+                        <input type="submit" value="Sort movies">
                     </form>
-                    <!-- <button class="alphabetical" data-value="alphabetical">Alphabetical</button>
-                    <button class="vote-average" data-value="vote-average">Votes</button>
-                    <button class="release-date" data-value="release-date">Date</button> -->
                 </div>
             </div>
         </section>

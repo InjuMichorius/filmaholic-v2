@@ -91,7 +91,7 @@ input[type="radio"] {
 
 .dropdown-content label {
     padding: 0;
-    margin: 5rem;
+    margin: 2rem;
 }
 
 .dropdown-content input[type="radio"]:checked + label {
