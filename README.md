@@ -23,7 +23,7 @@ The base endpoint is https://api.themoviedb.org/. All endpoints return either a 
 {
   "adult": false,
   "backdrop_path":"/8tNX8s3j1O0eqilOQkuroRLyOZA.jpg"
-  "genre_ids":[14,28,12],
+  "genre_ids": [14,28,12],
   "id":458576,"original_language":"en",
   "original_title":"Monster Hunter",
   "overview":"A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity.",
