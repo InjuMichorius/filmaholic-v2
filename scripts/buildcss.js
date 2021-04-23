@@ -1,6 +1,6 @@
-const gulp = require('gulp')
-const concat = require('gulp-concat')
-const minify = require('gulp-clean-css')
+import gulp from 'gulp'
+import concat from 'gulp-concat'
+import minify from 'gulp-clean-css'
  
 gulp.src('./public/style.css')
     .pipe(concat('builded.css'))

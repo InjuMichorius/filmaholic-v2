@@ -1,6 +1,6 @@
-const gulp = require('gulp')
-const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
+import gulp from 'gulp'
+import concat from 'gulp-concat'
+import uglify from 'gulp-uglify'
  
 gulp.src('./public/source/*.js')
     .pipe(concat('builded.js'))

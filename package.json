@@ -36,6 +36,9 @@
     "compression": "^1.7.4",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
     "heroku": "^7.51.0",
     "node-fetch": "^2.6.1",
     "path": "^0.12.7"
