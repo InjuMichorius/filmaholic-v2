@@ -6,11 +6,12 @@ Filmaholic is a school project I made that rates the suitability of movies based
 [Click here for the live demo](readearr.herokuapp.com/)
 
 # Table of Contents 🧭
-1. [Goal](https://github.com/InjuMichorius/ReadEar#goal-)
-2. [Getting started](https://github.com/InjuMichorius/ReadEar#getting-started-)
-3. [Wishlist](https://github.com/InjuMichorius/ReadEar#feature-wishlist--backlog-)
-4. [Practises](https://github.com/InjuMichorius/ReadEar#design-patterns-and-best-practices-)
-5. [Packages](https://github.com/InjuMichorius/ReadEar#packages-used-)
+1. [Goal](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#goal-)
+2. [API](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#api-%EF%B8%8F)
+3. [Getting started](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#getting-started-)
+4. [Wishlist](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#feature-wishlist--backlog-)
+5. [Practises](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#design-patterns-and-best-practices-)
+6. [Packages](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#packages-used-)
 
 # Goal 💪🏻
 The goal of Filmaholic is to provide its audience with information about movies, so they can make a decision on what to watch. They can also search a movie to see other people's opinions. This application will show the overall rating of any movie using the The Movie DataBase API.
