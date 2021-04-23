@@ -15,6 +15,35 @@ Filmaholic is a school project I made that rates the suitability of movies based
 # Goal 💪🏻
 The goal of Filmaholic is to provide its audience with information about movies, so they can make a decision on what to watch. They can also search a movie to see other people's opinions. This application will show the overall rating of any movie using the The Movie DataBase API.
 
+# API
+I made use of [The Movie DB API](https://www.themoviedb.org/) for this project.
+The base endpoint is https://api.themoviedb.org/. All endpoints return either a JSON object or an array. The endpoints I use are popular and ID. This is the structure of a movie array:
+
+```json
+{
+  "adult": false,
+  "backdrop_path":"/8tNX8s3j1O0eqilOQkuroRLyOZA.jpg"
+  "genre_ids":[14,28,12],
+  "id":458576,"original_language":"en",
+  "original_title":"Monster Hunter",
+  "overview":"A portal transports Cpt. Artemis and an elite unit of soldiers to a strange world where powerful monsters rule with deadly ferocity.",
+  "popularity":3079.082,
+  "poster_path":"/uwjaCH7PiWrkz7oWJ4fcL3xGrb0.jpg",
+  "release_date":"2020-12-03",
+  "title":"Monster Hunter",
+  "video":false,
+  "vote_average":7.3,
+  "vote_count":869
+}
+```
+
+The api url needs 3 things.
+* The base URL (https://api.themoviedb.org/)
+* The endpoint (popular)
+* The API key (?api_key=0a00a0a0aaa0aa00a0000a0000a0a0a0)
+
+The returning array will contain result[0] up to result[20]. The result is the movie array I made above.
+
 # Getting started ✨
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
