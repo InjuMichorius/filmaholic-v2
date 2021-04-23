@@ -3,7 +3,7 @@
 
 Filmaholic is a school project I made that rates the suitability of movies based on it's audience using an API. The user can visit a movie, sort the movies (based on date, votes and alphabet) and search for a specific movie. This application is a continuation of my other project called Filmaholic.
 
-[Click here for the live demo](readearr.herokuapp.com/)
+[Click here for the live demo](https://filmaholic-v2.herokuapp.com/)
 
 # Table of Contents 🧭
 1. [Goal](https://github.com/InjuMichorius/filmaholic-v2/blob/master/README.md#goal-)
