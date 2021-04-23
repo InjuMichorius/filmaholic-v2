@@ -43,6 +43,7 @@ The api url needs 3 things.
 * The API key (?api_key=0a00a0a0aaa0aa00a0000a0000a0a0a0)
 
 The returning array will contain movies, which you can acces with result[0] up to result[20]. To acces more movies, you'll need to navigate to the next page.
+
 # Getting started ✨
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
